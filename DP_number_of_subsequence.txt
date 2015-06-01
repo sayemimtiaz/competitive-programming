@@ -1,0 +1,22 @@
+/***10069***/
+You will be given two strings suppose,X=rabbb and Z=rabb.You have been asked to output number of occurance of
+Z as a subsequence in X.For example in the above case,answer is 3.Here max length of X is 10000 and Z is 100.
+so That's definitely gonna be a exponential algorithm if you use brute force technique and which will time out.
+So,lets design a DP approach for it and for it we need to find first a recurrance relation.
+Create a 2-D table like below:
+<<Initialize zeroth column and row with zero that is theoratically if any of X or Z is empty,then
+Then (NODS)number of distint sunsequence is zero.>>
+<<Now run two nested loop like below
+for(i=1;i<=length of X;i++)
+ for(j=1;j<=length of Y;j++)
+
+<<Here set memo[i][j]=0;If j>i that is if Z is greater than X than its useless finding NODS
+<<Else set memo[i][j]=memo[i-1][j] means you are copying NODS of X-1(Means last position skipped)
+and Z in memo[i][j] For the above case you are copiying NODS of X=rabb and Z=rabb which is 1
+<<Now If(X[i]==Y[j])
+<<Now If J==1 ,then increase memo[i][j] by 1.reason is clear,as you know last character of both X and Z
+macthes and that is you got a DS(distinct sub-sequence).
+<<Add memo[i][j]+=memo[i-1][j-1]; For above case Now memo[i][j] contains 1 and X=rabb and Z=rab
+so memo[i-1][j-1]=2.So add this result.
+<<Thats my DP solution for this problem>>
+<<Come on,Code on..:)>>

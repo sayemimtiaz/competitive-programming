@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[5000],e[5000],g[5000];
+	int i,j,k,l,l1,count,d[5000],h[5000];
+	while(gets(a))
+	{
+		l1=strlen(a);
+		k=0;
+		int c[5000]={0};
+		for(i=0;i<l1;i++)
+		{
+			if(c[i]==0)
+			{
+				count=1;
+				for(j=i+1;j<l1;j++)
+				{
+					if(a[i]==a[j])
+					{
+						c[j]=1;
+						count++;
+					}
+				}
+				e[k]=a[i];
+				d[k]=count;
+				k++;
+			}
+		}
+		gets(a);
+		l1=strlen(a);
+		int f[5000]={0};
+		l=0;
+		for(i=0;i<l1;i++)
+		{
+			if(f[i]==0)
+			{
+				count=1;
+				for(j=i+1;j<l1;j++)
+				{
+					if(a[i]==a[j])
+					{
+						f[j]=1;
+						count++;
+					}
+				}
+				g[l]=a[i];
+				h[l]=count;
+				l++;
+			}
+		}
+		l1=0;
+		for(i=0;i<k;i++)
+		{
+				for(j=0;j<l;j++)
+				{
+					if(e[i]==g[j])
+					{
+						count=(d[i]>h[j])?h[j]:d[i];
+						for(j=0;j<count;j++)
+						{
+							a[l1]=e[i];
+							l1++;
+						}
+						break;
+					}
+				}
+		}
+		for(i=0;i<l1;i++)
+		{
+			for(j=i+1;j<l1;j++)
+			{
+				if(a[i]>a[j])
+				{
+					e[0]=a[i];
+					a[i]=a[j];
+					a[j]=e[0];
+				}
+			}
+		}
+		for(i=0;i<l1;i++)
+		printf("%c",a[i]);
+	printf("\n");
+}
+return 0;
+}
+

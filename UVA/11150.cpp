@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+	int n,tot,a,b,t1,t2,t3;
+	while(scanf("%d",&n)==1)
+	{
+			a=n;
+		t3=a;
+		while(1)
+		{
+			b=a/3;
+			t3+=b;
+			a=a%3;
+			a+=b;
+			if(a<3)
+				break;
+		}
+		a=n;
+		t1=a;
+		a++;
+		while(1)
+		{
+			b=a/3;
+			t1+=b;
+			a=a%3;
+			a+=b;
+			if(a<3)
+				break;
+		}
+		if(a==2)
+			t1=0;
+		a=n;
+		t2=a;
+		a+=2;
+		while(1)
+		{
+			b=a/3;
+			t2+=b;
+			a=a%3;
+			a+=b;
+			if(a<3)
+				break;
+		}
+		if(a==1)
+			t2=0;
+		a=(t1>t2)?t1:t2;
+		a=(a>t3)?a:t3;
+		printf("%d\n",a);
+	}
+	return 0;
+}

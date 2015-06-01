@@ -1,0 +1,27 @@
+100,3n+1      113,Power Of Cryptology  272,TeX Coutes   294,Divisors
+299,Train Swapping    324,Factorial Frequencies 369,Combination    371 Ackermann Function
+382,Perfection    401,Palindromes 483 Word scrumble   488 Wave triangle	
+494 kindergarten counting game 499 What's the frequency, kenneth?    576 Haiku Review
+579 Clockhands   591 Box Of Bricks  621 Secret Research    694 The Collatz Sequence
+739 Soundex Indexing    10008 What’s Cryptanalysis?
+10010 Reverse and Add  10019 Funny Encryption Method
+10035 Primary Arithmetic   10038 Jolly Jumpers
+10041 Vito’s Family  10055 Hasmat the brave warrior
+10071 Back to high school physics 10079 Pizza cutting
+10082 WERTYU  10170 The Hotel With Infinite Room
+10195 The knights of the round table   10222 Decode The Mad Man
+10235 Simply Emirp   10260 Soundex
+10300 Ecological Premium  10302 Summation Of Polynomials
+10327 Flip Sort  10346 Peter’s smoke
+10347 Medians  10370 Above Average 10424 Love Calculator  10696 f91
+10699 Count The Factors 10783 Odd Sum 10789 Prime Frequency  10812 Beat The Spread
+10921 Find The Telephone  10922 2- the 9’s
+10924 Prime Word  10929 You Can Say 11  10931 Parity  10948  The Primary Problem
+10970 Big Chocolate 11150 Cola  11172 Relational Operator
+11185 Ternary  11192 Group Reverse  11332 Summing Digits
+11498 Division Of Nlogonia  11530 SMS Typing  11541 Decoding
+11547 Automatic Answer  11577 Letter Frequency  11636 Hello World! 11689 Soda Surpler
+11713 Abstract Names  11715 Car  11716 Digital Fortress  11723 Numbering Roads
+11727 Cost Cutting  11734 Big Number Of Teams will solve this
+11743 Credit Check
+	

@@ -1,0 +1,81 @@
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+#include<stdlib.h>
+long  a[10000100],c;
+bool flag[10000100];
+void seive(long n)
+{
+    long  k,i,j,r;
+    k=sqrt(n)+1;
+    memset(flag,0,sizeof(flag));
+    flag[1]=1;
+    a[0]=2;
+    c=1;
+    for(i=4;i<=n;i+=2)
+        flag[i]=1;
+    for(i=3;i<=n;i+=2)
+    {
+       if(flag[i]==0)
+       {
+          a[c++]=i;
+          if(k>=i)
+          {
+              r=i+i;
+              for(j=i*i;j<=n;j+=r)
+                 flag[j]=1;
+           }
+         }
+      }
+}
+int main()
+{
+    long long  n,i,max,j;
+     seive(10000100);
+     while(1)
+     {
+		 scanf("%lld",&n);
+		 if(n==0)
+			 break;
+         j=0;
+         max=0;
+         if(n==1||n==-1)
+         {
+            printf("-1\n");
+            continue;
+         }
+         if(n<0)
+			 n=-n;
+         for(i=0;i<c&&n>=a[i];)
+         {
+           if(n%a[i]==0)
+           {
+               n=n/a[i];
+               if(a[i]>max)
+               {
+                  max=a[i];
+                  j++;
+               }
+            }
+           else
+           {
+              i++;
+           }
+         }
+		 if(n!=1&&j==0)
+		 {
+			 printf("-1\n");
+			 continue;
+		 }
+		 if(n!=1)
+		 {
+			 printf("%lld\n",n);
+			 continue;
+		 }
+         if(j==1)
+            printf("-1\n");
+         else 
+			printf("%lld\n",max);
+       }
+       return 0;
+}

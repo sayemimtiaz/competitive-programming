@@ -1,0 +1,69 @@
+#include<iostream.h>
+#include<string.h>
+int main()
+{
+	char input[1000];
+	int a[1000],b[1000],i,j,h,m,t1,t2,len;
+	while(cin>>input)
+	{
+		len=strlen(input);
+		m=0;
+		for(i=0;i<1000;i++)
+			b[i]=0;
+		for(i=0;i<len;i++)
+		{
+			h=0;
+			if(i==0)
+			{
+			   a[m]=(int)input[i];
+			   b[m]=1;
+			   m++;
+			}
+			else
+			{
+				for(j=0;j<m;j++)
+				{
+					if((int)input[i]==a[j])
+					{
+						b[j]++;
+						h=1;
+						break;
+					}
+				}
+				if(h==0)
+				{
+					a[m]=(int)input[i];
+					b[m]=1;
+					m++;
+				}
+			}
+		}
+		for(i=0;i<m;i++)
+		{
+			for(j=i+1;j<m;j++)
+			{
+				if(b[i]>b[j])
+				{
+					t1=b[i];
+					b[i]=b[j];
+					b[j]=t1;
+					t2=a[i];
+					a[i]=a[j];
+					a[j]=t2;
+				}
+				else if(b[i]==b[j]&&a[i]<a[j])
+				{
+					t2=a[i];
+					a[i]=a[j];
+					a[j]=t2;
+				}
+			}
+		}
+		for(i=0;i<m;i++)
+		{
+			cout<<a[i]<<" "<<b[i]<<"\n";
+		}
+		cout<<"\n";
+	}
+	return 0;
+}
