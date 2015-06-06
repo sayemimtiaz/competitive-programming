@@ -8,7 +8,7 @@ Create a 2-D table like below:
 Then (NODS)number of distint sunsequence is zero.>>
 <<Now run two nested loop like below
 for(i=1;i<=length of X;i++)
- for(j=1;j<=length of Y;j++)
+ for(j=1;j<=length of Z;j++)
 
 <<Here set memo[i][j]=0;If j>i that is if Z is greater than X than its useless finding NODS
 <<Else set memo[i][j]=memo[i-1][j] means you are copying NODS of X-1(Means last position skipped)
